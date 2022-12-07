@@ -11,7 +11,7 @@ export const DropdownComponent = () => {
 
     const handleClick = async () => {
         const result = await getCurrencyConversion(from, to, mount)
-        setConversion(result)
+        setConversion(result.toFixed(2))
     }
 
     return (
