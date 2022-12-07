@@ -1,0 +1,11 @@
+.Currency_converter .container {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Currency_converter .container>button {
+    margin: 1rem;
+}
