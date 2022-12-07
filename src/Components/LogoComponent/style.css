@@ -1,0 +1,8 @@
+.logo_Section .container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo_Section .container>img {
+    width: 400px;
+}
