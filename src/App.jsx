@@ -6,11 +6,11 @@ import FooterComponent from './Components/FooterComponent/FooterComponent';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <LogoComponent />
       <DropdownComponent />
       <FooterComponent />
-    </div>
+    </>
   );
 }
 
