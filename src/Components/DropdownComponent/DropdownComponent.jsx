@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, InputGroup, Form } from 'react-bootstrap'
-import { getCurrencyConversion } from '../../Services/get-currencyConverter';
+import { getCurrencyConversion, listOfCountries } from '../../Services/get-currencyConverter';
 import './style.css'
 
 export const DropdownComponent = () => {
@@ -20,8 +20,10 @@ export const DropdownComponent = () => {
                 <div className='container'>
                     <InputGroup className="mb-3">
                         <Form.Select title='From' onChange={(e) => setFrom(e.target.value)}>
-                            <option>From</option>
-                            <option value={"CRC"}>CRC</option>
+                            <option value={""}>From</option>
+                            {listOfCountries.map((el, index) => {
+                                return <option value={el} key={index}>{el}</option>
+                            })}
                         </Form.Select>
                         <Form.Control aria-label="Number input" type='number' onChange={(e) => setMount(e.target.value)} />
                     </InputGroup>
@@ -30,8 +32,10 @@ export const DropdownComponent = () => {
 
                     <InputGroup className="mb-3">
                         <Form.Select onChange={(e) => setTo(e.target.value)}>
-                            <option>To</option>
-                            <option value={"USD"}>USD</option>
+                            <option value={""}>To</option>
+                            {listOfCountries.map((el, index) => {
+                                return <option value={el} key={index}>{el}</option>
+                            })}
                         </Form.Select>
                         <Form.Control aria-label="Number input" type='number' value={conversion} disabled />
                     </InputGroup>
