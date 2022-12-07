@@ -21,6 +21,17 @@ const getCurrencyConversion = async (from, to, mount) => {
     }
 }
 
+const listOfCountries = [
+    "CRC",
+    "EUR",
+    "USD",
+    "AED",
+    "AFN",
+    "ALL",
+    "AMD"
+]
+
 export {
-    getCurrencyConversion
+    getCurrencyConversion,
+    listOfCountries
 }
