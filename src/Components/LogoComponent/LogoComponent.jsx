@@ -5,7 +5,7 @@ export const LogoComponent = () => {
         <section>
             <div className="logo_Section">
                 <div className="container">
-                    <img src="logo.png" alt="logo" style={{ width: "35%" }} />
+                    <img src="/logo.png" alt="logo" style={{ width: "35%" }} />
                 </div>
             </div>
         </section>
